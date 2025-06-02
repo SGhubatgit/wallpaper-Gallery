@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallpaper Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar section -->
+    <header>
+      <div class="logo">Wallpaper<span>Gallery</span></div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Categories</a>
+            <div class="dropdown-content">
+              <a href="#" data-category="nature">Nature</a>
+              <a href="#" data-category="abstract">Abstract</a>
+              <a href="#" data-category="city">City</a>
+              <a href="#" data-category="animals">Animals</a>
+              <a href="#" data-category="space">Space</a>
+              <a href="#" data-category="art">Art</a>
+            </div>
+          </li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+      <!-- Search box section -->
+      <div class="search-box">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search wallpapers..."
+          aria-label="Search wallpapers"
+        />
+        <button id="searchBtn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <!-- Theme toggle button -->
+      <div class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-light" title="Light mode">
+          <i class="fas fa-sun"></i>
+        </span>
+        <span class="toggle-dark" title="Dark mode">
+          <i class="fas fa-moon"></i>
+        </span>
+      </div>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+      <!-- Hero/Landing section -->
+      <section class="hero">
+        <h1>Discover Stunning Wallpapers</h1>
+        <p>
+          Browse thousands of high-quality wallpapers for your desktop and
+          mobile devices.
+        </p>
+        <button class="explore-btn" id="exploreBtn">Explore Now</button>
+      </section>
+
+      <!-- Featured wallpapers section -->
+      <section id="featuredWallpapers" class="wallpaper-grid">
+        <h2>Featured Wallpapers</h2>
+        <div class="grid" id="wallpaperGrid">
+          <!-- Loading indicator -->
+          <div class="loading">Loading wallpapers...</div>
+        </div>
+      </section>
+
+      <!-- About us section -->
+      <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Wallpaper Gallery! We provide a wide range of beautiful
+          wallpapers for all devices. Our mission is to inspire creativity and
+          help you personalize your digital spaces.
+        </p>
+        <button class="about-toggle" onclick="toggleAbout()">
+          Show More/Less
+        </button>
+        <div class="about-details">
+          <p>
+            Founded in 2023, Wallpaper Gallery is a community-driven platform
+            where users can download and share high-quality wallpapers. Our
+            collection is updated regularly to keep your screens fresh and
+            stylish.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal for wallpaper preview -->
+    <div id="wallpaperModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-content">
+        <span class="close" aria-label="Close modal">&times;</span>
+        <img id="modalImg" src="" alt="Wallpaper Preview" />
+        <div class="modal-actions">
+          <a id="downloadBtn" href="#" download class="btn">
+            <i class="fas fa-download"></i> Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#featuredWallpapers">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <p>&copy; 2023 Wallpaper Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
