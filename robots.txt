@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wallpapergallery-01.netlify.app/sitemap.xml
